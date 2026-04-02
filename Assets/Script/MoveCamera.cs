@@ -2,11 +2,8 @@ using UnityEngine;
 
 public class MoveCamera : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    
+    public Transform cameraPosition;
 
     // Update is called once per frame
     void Update()
@@ -14,3 +11,5 @@ public class MoveCamera : MonoBehaviour
         transform.position = cameraPosition.position;
     }
 }
+
+//What the heck
