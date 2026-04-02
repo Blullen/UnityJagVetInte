@@ -9,25 +9,38 @@ public class MeshGenerator : MonoBehaviour {
 
     Vector3[] vertices;
     int[] triangles;
+    Color[] colors;
 
     public int xSize = 20;
     public int zSize = 20;
+
+    public int textureWidth = 1024;
+    public int textureHeight = 1024;
+
+    public float noise01Scale = 2f;
+    public float noise01Amp = 2f;
+
+    public float noise02Scale = 4f;
+    public float noise02Amp = 4f;
+
+    public float noise03Scale = 6f;
+    public float noise03Amp = 6f;
+
+    public Gradient gradient;
 
     void Start()
     {
         mesh = new Mesh();
         GetComponent<MeshFilter>().mesh = mesh;
-
-        StartCoroutine(CreateShape());
     }
 
     private void Update()
     {
+        CreateShape();
         UpdateMesh();
     }
 
-
-    IEnumerator CreateShape()
+    void CreateShape()
     {
         vertices = new Vector3[(xSize + 1) * (zSize + 1)];
 
@@ -35,7 +48,8 @@ public class MeshGenerator : MonoBehaviour {
         {
             for (int x = 0; x <= xSize; x++)
             {
-                vertices[i] = new Vector3(x, 0, z);
+                float y = Mathf.PerlinNoise(x * 0.3f, z * 0.3f) * 2f;
+                vertices[i] = new Vector3(x, y, z);
                 i++;
             }
         }
@@ -58,11 +72,22 @@ public class MeshGenerator : MonoBehaviour {
 
                 vert++;
                 tris += 6;
-
-                yield return new WaitForSeconds(.1f);
-
-                // Börja videon på 10:20 ish //
             }
+            vert++;
+        }
+
+        colors = new Color[vertices.Length];
+
+        for (int i = 0, z = 0; z <= zSize; z++)
+        {
+            for (int x = 0; x <= xSize; x++)
+            {
+                float height = vertices[i].y;
+                colors[i] = gradient.Evaluate(height);
+                i++;
+            }
+
+            // Fortsätt vid 7:45 på videon din dumma jävel //
         }
     }
 
@@ -72,18 +97,8 @@ public class MeshGenerator : MonoBehaviour {
 
         mesh.vertices = vertices;
         mesh.triangles = triangles;
+        mesh.colors = colors;
 
         mesh.RecalculateNormals();
-    }
-
-    private void OnDrawGizmos()
-    {
-        if (vertices == null)
-            return;
-
-        for (int i = 0; i < vertices.Length; i++)
-        {
-            Gizmos.DrawSphere(vertices[i], .1f);
-        }
     }
 }
