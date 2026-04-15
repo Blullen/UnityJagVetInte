@@ -28,6 +28,9 @@ public class MeshGenerator : MonoBehaviour {
 
     public Gradient gradient;
 
+    float minTerrainHeight;
+    float maxTerrainHeight;
+
     void Start()
     {
         mesh = new Mesh();
@@ -50,6 +53,12 @@ public class MeshGenerator : MonoBehaviour {
             {
                 float y = Mathf.PerlinNoise(x * 0.3f, z * 0.3f) * 2f;
                 vertices[i] = new Vector3(x, y, z);
+
+                if (y > maxTerrainHeight)
+                    maxTerrainHeight = y;
+                if (y < minTerrainHeight)
+                    minTerrainHeight = y;
+
                 i++;
             }
         }
@@ -82,12 +91,10 @@ public class MeshGenerator : MonoBehaviour {
         {
             for (int x = 0; x <= xSize; x++)
             {
-                float height = vertices[i].y;
+                float height = Mathf.InverseLerp(minTerrainHeight, maxTerrainHeight, vertices[i].y);
                 colors[i] = gradient.Evaluate(height);
                 i++;
             }
-
-            // Fortsätt vid 7:45 på videon din dumma jävel //
         }
     }
 
