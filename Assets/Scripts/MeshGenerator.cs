@@ -51,7 +51,7 @@ public class MeshGenerator : MonoBehaviour {
         {
             for (int x = 0; x <= xSize; x++)
             {
-                float y = Mathf.PerlinNoise(x * 0.3f, z * 0.3f) * 2f;
+                float y = Mathf.PerlinNoise(x * 0.3f, z * 0.3f) * 6f;
                 vertices[i] = new Vector3(x, y, z);
 
                 if (y > maxTerrainHeight)
