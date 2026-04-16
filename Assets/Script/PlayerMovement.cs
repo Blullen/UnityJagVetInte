@@ -1,47 +1,72 @@
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour { 
+public class PlayerMovment : MonoBehaviour
+{
+    #region Variables
+    public Rigidbody Rigid;
+    public Transform CameraHolder;   // Assign your Camera here
+    public float MouseSensitivity = 2f;
+    public float MoveSpeed = 5f;
+    public Transform GroundCheck;
+    public float GroundDistance = 0.2f;
+    public LayerMask GroundMask;
 
-        [Header("Movement")]
-        public float moveSpeed;
+    public float jumpForce;
+    public float jumpCooldown;
+    public float airMultiplier
+    bool readyToJump;
+    #endregion
 
-        public Transform orientation;
+    [Header("Keybinds")]
+    public KeyCodes jumpKey = KeyCode.Space;
 
-    float horizontalInput;
-    float verticalInput;
+    float xRotation = 0f;
 
-    Vector3 moveDirection;
-
-    Rigidbody rb;
-
-    public void Start()
+    void Start()
     {
-        rb = GetComponent<Rigidbody>();
-        rb.freezeRotation = true;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
-    private void Udate()
+    void Update()
     {
-        MyInput();
+        Look();
+        Move();
     }
 
-    private void FixedUpdate()
+    void Look()
     {
-        MovePlayer();
-    }
-    
-    private void MyInput()
-    {
-        horizontalInput = Input.GetAxisRaw("Horizontal");
-        verticalInput = Input.GetAxisRaw("Vertical");
-    }
+        float mouseX = Input.GetAxis("Mouse X") * MouseSensitivity;
+        float mouseY = Input.GetAxis("Mouse Y") * MouseSensitivity;
 
-    private void MovePlayer()
-    {
-        moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
+        // Rotate player body (left/right)
+        Rigid.MoveRotation(Rigid.rotation * Quaternion.Euler(0f, mouseX, 0f));
 
-        rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
+        // Rotate camera (up/down)
+        xRotation -= mouseY;
+        xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+
+        CameraHolder.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
     }
 
-    
+    void Move()
+    {
+        Vector3 move =
+            transform.forward * Input.GetAxis("Vertical") +
+            transform.right * Input.GetAxis("Horizontal");
+
+        Rigid.MovePosition(Rigid.position + move * MoveSpeed * Time.deltaTime);
+    }
+
+    private void Jump()
+    {
+        Rigid.velocity = new Vector3(Rigid.velocity.x, 0f, Rigid.velocity.z);
+
+        Rigid.AddForce(transform.up * jumpForce, ForceMode.Impulse);
+    }
+
+    private void RestJump()
+    {
+        readyToJump = true;
+    }
 }

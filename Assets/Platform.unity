@@ -260,7 +260,7 @@ Transform:
   m_GameObject: {fileID: 601483838}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.66885, y: 4.54253, z: 4.62823}
+  m_LocalPosition: {x: -4.66885, y: 4.66, z: 4.62823}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -277,7 +277,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 601483838}
   serializedVersion: 5
-  m_Mass: 1
+  m_Mass: 80
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -308,8 +308,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53212dca9a6925f419da64721ba368fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
-  moveSpeed: 7
-  orientation: {fileID: 1360124983}
+  Rigid: {fileID: 601483840}
+  CameraHolder: {fileID: 958092655}
+  MouseSensitivity: 2
+  MoveSpeed: 10
+  JumpForce: 5
+  GroundCheck: {fileID: 0}
+  GroundDistance: 0.2
+  GroundMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &650011089
 GameObject:
   m_ObjectHideFlags: 0
