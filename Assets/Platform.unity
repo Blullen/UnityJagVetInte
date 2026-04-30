@@ -428,13 +428,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e9b24598305ff6469ecec0377976a26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MapGenerator
+  drawMode: 1
   mapWidth: 100
   mapHeight: 100
-  noiseScale: 27.6
-  octaves: 4
+  noiseScale: 25
+  octaves: 5
   persistence: 0.5
-  lacunarity: 1.87
+  lacunarity: 2
+  seed: 0
+  offset: {x: 0, y: 0}
   autoUpdate: 1
+  regions:
+  - name: Water Deep
+    height: 0.3
+    color: {r: 0.14129584, g: 0.3206452, b: 0.509434, a: 0}
+  - name: Water Shallow
+    height: 0.4
+    color: {r: 0.21176472, g: 0.4039216, b: 0.7686275, a: 0}
+  - name: Sand
+    height: 0.45
+    color: {r: 0.78113204, g: 0.78113204, b: 0.49962977, a: 0}
+  - name: Grass
+    height: 0.55
+    color: {r: 0.4039216, g: 0.5764706, b: 0.24705884, a: 0}
+  - name: Grass 2
+    height: 0.6
+    color: {r: 0.227451, g: 0.4039216, b: 0.03137255, a: 0}
+  - name: Rock
+    height: 0.7
+    color: {r: 0.36078432, g: 0.2627451, b: 0.24313727, a: 0}
+  - name: Rock 2
+    height: 0.9
+    color: {r: 0.28627452, g: 0.24313727, b: 0.227451, a: 0}
+  - name: Snow
+    height: 1
+    color: {r: 0.9960785, g: 0.9960785, b: 0.9960785, a: 0}
 --- !u!4 &1533918467
 Transform:
   m_ObjectHideFlags: 0
