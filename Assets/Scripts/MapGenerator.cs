@@ -4,7 +4,7 @@ using System.Collections;
 public class MapGenerator : MonoBehaviour 
 { 
 
-    public enum DrawMode {NoiseMap, ColorMap, Mesh };
+    public enum DrawMode {NoiseMap, ColorMap, Mesh};
     public DrawMode drawMode;
 
     public int mapWidth;
