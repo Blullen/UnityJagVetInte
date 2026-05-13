@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\lucas.lindquist\\OneDrive - Academedia\\Desktop\\Unity Game Prototyp\\BeanRizing\\UnityJagVetInte\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\lucas.lindquist\\onedrive - academedia\\desktop\\unity game prototyp\\beanrizing\\unityjagvetinte\\assets\\scripts\\mapdisplay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\mapdisplay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\lucas.lindquist\\onedrive - academedia\\desktop\\unity game prototyp\\beanrizing\\unityjagvetinte\\assets\\scripts\\mapgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\mapgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\lucas.lindquist\\onedrive - academedia\\desktop\\unity game prototyp\\beanrizing\\unityjagvetinte\\assets\\scripts\\meshgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\meshgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\lucas.lindquist\\onedrive - academedia\\desktop\\unity game prototyp\\beanrizing\\unityjagvetinte\\assets\\scripts\\mapdisplay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\mapdisplay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\lucas.lindquist\\onedrive - academedia\\desktop\\unity game prototyp\\beanrizing\\unityjagvetinte\\assets\\scripts\\noise.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -34,17 +34,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "MapGenerator.cs",
               "DocumentMoniker": "C:\\Users\\lucas.lindquist\\OneDrive - Academedia\\Desktop\\Unity Game Prototyp\\BeanRizing\\UnityJagVetInte\\Assets\\Scripts\\MapGenerator.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\MapGenerator.cs",
               "ToolTip": "C:\\Users\\lucas.lindquist\\OneDrive - Academedia\\Desktop\\Unity Game Prototyp\\BeanRizing\\UnityJagVetInte\\Assets\\Scripts\\MapGenerator.cs",
               "RelativeToolTip": "Assets\\Scripts\\MapGenerator.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAAAYwDkAAACBAAAAAAAAAA==",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAYwEIAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-16T07:55:54.78Z",
               "IsPinned": true,
@@ -52,13 +52,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "MeshGenerator.cs",
               "DocumentMoniker": "C:\\Users\\lucas.lindquist\\OneDrive - Academedia\\Desktop\\Unity Game Prototyp\\BeanRizing\\UnityJagVetInte\\Assets\\Scripts\\MeshGenerator.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\MeshGenerator.cs",
               "ToolTip": "C:\\Users\\lucas.lindquist\\OneDrive - Academedia\\Desktop\\Unity Game Prototyp\\BeanRizing\\UnityJagVetInte\\Assets\\Scripts\\MeshGenerator.cs",
               "RelativeToolTip": "Assets\\Scripts\\MeshGenerator.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAQwBgAAABiAAAAAAAAAA==",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwBwAAABGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-30T07:28:37.507Z",
               "EditorCaption": ""
@@ -89,13 +89,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "MapDisplay.cs",
               "DocumentMoniker": "C:\\Users\\lucas.lindquist\\OneDrive - Academedia\\Desktop\\Unity Game Prototyp\\BeanRizing\\UnityJagVetInte\\Assets\\Scripts\\MapDisplay.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\MapDisplay.cs",
               "ToolTip": "C:\\Users\\lucas.lindquist\\OneDrive - Academedia\\Desktop\\Unity Game Prototyp\\BeanRizing\\UnityJagVetInte\\Assets\\Scripts\\MapDisplay.cs",
               "RelativeToolTip": "Assets\\Scripts\\MapDisplay.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAhwA8AAAA+AAAAAAAAAA==",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAawA8AAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-16T08:01:55.621Z",
               "EditorCaption": ""
